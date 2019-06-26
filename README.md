@@ -31,3 +31,9 @@ A gem that wraps the Todoable API
 - API_VERSION switch if multiple API versions exist
 - JSON flag to return JSON instead of Ruby objects if desired (for example, if passing to a JS client for some reason)
 - split API handlers, auth handlers, and errors into own files if desired
+
+## Usage:
+
+- run tests with `rake`
+- manual instantiation: `Todoable::Api.new(username, password)`
+
