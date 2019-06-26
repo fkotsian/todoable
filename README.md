@@ -1,6 +1,6 @@
 # TDODABLE
 
-A gem that wraps a Todo API
+A gem that wraps the Todoable API
 
 ## Features
 
@@ -16,24 +16,18 @@ A gem that wraps a Todo API
 ## Desired components
 
 - tests for each method that ensures is working as intended
+- built-in authentication handling
+- Ruby-native return values for ease of use
+- input and error handling for developer friendliness
 
-## Possible extensions
+## Notes:
 
-- a utility function that autorenews your auth token given a username and password (if you prefer // feel comfortable giving out this information)
-- a JSON? flag that returns either pure JSON or the objects
-- a "custom" endpoint that allows you to pass an API path and handles auth for you
-
-
-## Refactor
-
-- refactor out an AuthToken class, perhaps OStruct it
-
-
-Notes:
-
-- elected to return lists of Ruby objects (as opposed to JSON) as assumed the consumer would be Ruby backends (not backend intermediaries passing to a frontend or sth strange like that);
-- therefore handle API errors at the library level instead of passing them on
-- opt to allow the user to configure the client as desired (pass in username, pass), though also able to read from env for convenience and security ie if running in webserver
-
+- pretty fun to write!
 - chose to return Ruby objects since assume this is a server-side gem meant to be used in Ruby (use a JS library if on client side and want JSON API shortcuts)
-- chose to not error-check inputs because assume API will do that and creates extra maintainability workload for us to wrap all errors - instead just pass them through as API owner updates them) -- purpose of this gem is basically to provide convenience methods + access/auth to the API, for ease of use / developer happiness
+- chose to pass any API error on to user to make gem more maintainable - if Todoable API changes, our gem should remain usable
+
+## Possible extensions:
+
+- API_VERSION switch if multiple API versions exist
+- JSON flag to return JSON instead of Ruby objects if desired (for example, if passing to a JS client for some reason)
+- split API handlers, auth handlers, and errors into own files if desired
