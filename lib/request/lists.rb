@@ -5,8 +5,6 @@ module Todoable
   module Request
     module Lists
 
-      include Todoable::Request
-
       def lists
         res = request_base
           .get("#{API_ROOT}/lists")

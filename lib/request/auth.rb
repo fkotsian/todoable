@@ -1,3 +1,5 @@
+require 'http'
+require 'ostruct'
 require 'request/base'
 require 'request/errors'
 

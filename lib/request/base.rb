@@ -1,3 +1,6 @@
+require 'http'
+require 'ostruct'
+
 module Todoable
   module Request
 
