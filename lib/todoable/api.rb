@@ -1,8 +1,8 @@
-require 'request/base'
-require 'request/auth'
-require 'request/lists'
-require 'request/items'
-require 'request/errors'
+require 'todoable/request/base'
+require 'todoable/request/auth'
+require 'todoable/request/lists'
+require 'todoable/request/items'
+require 'todoable/request/errors'
 
 module Todoable
   class Api

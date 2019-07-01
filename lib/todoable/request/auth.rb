@@ -1,7 +1,7 @@
 require 'http'
 require 'ostruct'
-require 'request/base'
-require 'request/errors'
+require 'todoable/request/base'
+require 'todoable/request/errors'
 
 module Todoable
   module Request
