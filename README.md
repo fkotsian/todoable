@@ -1,4 +1,4 @@
-# TDODABLE
+# TODOABLE
 
 A gem that wraps the Todoable API
 
